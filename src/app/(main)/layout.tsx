@@ -12,9 +12,7 @@ export default async function MainLayout({
 }) {
   const session = await getServerSession(authOptions);
 
-  if (!session?.user) {
-    redirect('/login'); // Redirect to login if not authenticated
-  }
+
 
   // You can fetch user-specific data here if needed using session.user.id
 
